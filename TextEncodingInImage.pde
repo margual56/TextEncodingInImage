@@ -1,12 +1,9 @@
 void setup(){
   size(500, 500);
-  /*char c = 'A';
-  int code = (int)c;
-  String hex = toHex(c);
-  int i = encode(c, 1);
   
-  println("\'" + c + "\' is encoded as " + code + " in ascii, which in hexadecimal is " + hex + " and the first number corresponds to " + i);*/
-  
+  //////////////////ENCODE TEXT INTO IMAGE//////////////////////
+  //Change the name of the image to encode the text in
+  //Change the name of the file containing the message
   /*PImage img = encode("cat.jpg", "message.txt");
   
   float scale = min(width/img.width, height/img.height);
@@ -15,19 +12,23 @@ void setup(){
   
   img.save("encodedCat.png");*/
   
+  //////////////////DECODE TEXT FROM IMAGE//////////////////////
+  //Change the name of the image to decode the text from
   String decoded[] = {decode("encodedCat.png")};
   
+  //Change the name of the file to write the message in
   saveStrings("decodedMessage.txt", decoded);
   
   println("Finished");
 }
 
 void draw(){
-  frameRate(20);
+  //Because it takes long sometimes, this lets you know that it finishes (flickers)
+  /*frameRate(20);
   if(frameCount % 2 == 0)
     background(255, 0, 0);
   else
-    background(0, 0, 255);
+    background(0, 0, 255);*/
 }
 
 PImage encode(String image, String file){
